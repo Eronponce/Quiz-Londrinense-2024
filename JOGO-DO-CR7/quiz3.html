@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Quiz de inglês do CR7</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            background-image: url(https://assets.goal.com/images/v3/blta9682d9f622dfe00/1328c8dc905c021604cc8fe96633717ca8402d34.jpg?auto=webp&format=pjpg&width=3840&quality=60);
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 800px;
+            max-width: 90%;
+            text-align: center;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .option {
+            background-color: #f4f4f4;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #e0e0e0;
+        }
+
+        .option.selected {
+            border-color: #4caf50;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Quiz de inglês do CR7</h1>
+        <div class="question">Quantas bolas de ouro o CR7 tem?</div>
+        <div class="options">
+            <div class="option" onclick="selectOption(this)">One</div>
+            <div class="option" onclick="selectOption(this)">Two</div>
+            <div class="option" onclick="selectOption(this)">Three</div>
+            <div class="option" onclick="selectOption(this)">Four</div>
+            <div class="option" onclick="selectOption(this)">Five</div>
+            <div class="option" onclick="selectOption(this)">Six</div>
+        </div>
+
+        <button class="button" onclick="checkAnswer()">Finish</button>
+    </div>
+
+    <script>
+        var selectedOption = null;
+
+        function selectOption(option) {
+            var options = document.querySelectorAll('.option');
+            options.forEach(function(opt) {
+                opt.classList.remove('selected');
+            });
+            option.classList.add('selected');
+            selectedOption = option.textContent;
+        }
+
+        function checkAnswer() {
+            if (selectedOption === null) {
+                alert('Por favor, selecione uma opção.');
+            } else if (selectedOption === 'Five') {
+                // Resposta correta
+                alert('Parabéns! Você acertou.');
+                window.location.href = '../learning-about-animals/index.html';
+                // Você pode redirecionar para outra página, se desejar:
+                // window.location.href = 'resultado.html';
+            } else {
+                // Resposta incorreta
+                alert('Resposta incorreta. Tente novamente.');
+            }
+        }
+    </script>
+</body>
+
+</html>

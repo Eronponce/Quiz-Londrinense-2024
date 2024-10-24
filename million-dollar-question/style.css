@@ -1,0 +1,93 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #c5e1a5; /* Verde claro, representando a vegetação */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #388e3c; /* Verde mais escuro para destacar */
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #689f38; /* Outro tom de verde */
+}
+
+.shadow {
+  margin-bottom: 20px;
+}
+
+.shadow img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%; /* Formato arredondado para imagens */
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options button {
+  background-color: #ffcc80; /* Amarelo para contrastar com o verde */
+  border: none;
+  color: #333; /* Cor de texto mais escuro */
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.options button:hover {
+  background-color: #ffa726; /* Tom mais escuro de amarelo ao passar o mouse */
+}
+
+p {
+  font-size: 14px; /* Texto um pouco maior para melhor legibilidade */
+  color: #666; /* Cinza escuro para o texto */
+  margin-top: 20px;
+}
+// Função para mostrar a mensagem com base na resposta
+function mostrarMensagem(pais) {
+    var mensagem = document.getElementById('mensagem');
+    if (pais === 'ITALY') {
+        mensagem.textContent = 'Correct! Congrats!';
+    } else {
+        mensagem.textContent = 'Wrong! Try again!';
+    }
+    mensagem.style.display = 'block';
+}
+
+// Adiciona ouvintes de eventos aos botões depois que o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtém todos os botões
+    var buttons = document.querySelectorAll('.options button');
+
+    // Adiciona um ouvinte de eventos a cada botão
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var pais = this.getAttribute('data-country');
+            mostrarMensagem(pais);
+        });
+    });
+});

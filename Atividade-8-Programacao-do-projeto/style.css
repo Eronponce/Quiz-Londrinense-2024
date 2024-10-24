@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+background-color: #ffffff;
+}
+
+
+H1 { color: #9b6eaf;
+  font-size: 300%;
+    font-family: 'Times New Roman', Times, serif;
+  text-align:center
+  
+}
+
+  .button-container {
+    display: grid;
+    width: 300px; 
+    margin: 0 auto;
+  }
+
+button {
+  width: 400px;
+    font-size: 20px;
+    height: 10px; 
+  
+    background-color: #ad8abc; 
+    color: #000000; 
+    border-radius: 5px; 
+    padding: 10%;  }
+    
+  button {
+    font-family: 'Segoe UI' , sans-serif;
+  }
+  
+  .button-container button {
+    margin: 10px;  }
+
+  button:hover {
+    background-color: #7a4d8c;   }

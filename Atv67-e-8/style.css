@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-image:url(https://static.todamateria.com.br/upload/pa/is/paisagem-natural-og.jpg);
+  background-size:cover
+
+}
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+
+  #word-search {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+
+  #word-search td {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: middle;
+ 
+  }
+  #oi td { margin: px;}
+  
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+
+td:hover{
+  background-color: green;
+  animation: 2s;
+}

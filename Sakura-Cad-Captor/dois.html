@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Quiz - Questão 2</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="Jogo">
+  <div class="tudao">
+    <header>
+      <h1 class="Sakura">★Quiz★</h1>
+    </header>
+
+
+    <img src="https://pm1.aminoapps.com/6495/45e5fef07c006d3145af05e3ea5375b0ac3e3f27_00.jpg" alt="Sakura Card Captor" width="800" height="650"/>
+
+    <h1><i>2-who is the love interest of the protagonist?</i></h1>
+    <form onsubmit="return checkAnswer()">
+      <div class="aff">
+        <input type="radio" name="question2" value="Syaoran" id="option1">
+        <label for="option1"> A human </label><br>
+        <input type="radio" name="question2" value="Yukito" id="option2">
+        <label for="option2"> her staff </label><br>
+        <input type="radio" name="question2" value="Yamazaki" id="option3">
+        <label for="option3"> a cat </label><br><br>
+        <input class="Dois" type="submit" value="Enviar">
+      </div>
+    </form>
+
+    <script>
+      function checkAnswer() {
+        const radios = document.getElementsByName('question2');
+        let selectedValue;
+        for (const radio of radios) {
+          if (radio.checked) {
+            selectedValue = radio.value;
+            break;
+          }
+        }
+        if (selectedValue === 'Syaoran') {
+          alert('Correto!');
+          window.location.href = 'fim.html';
+          return false;
+        } else {
+          alert('Incorreto. Tente novamente.');
+          return false;
+        }
+      }
+    </script>
+
+  </div>
+</body>
+</html>

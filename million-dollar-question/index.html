@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Million Dollar Question</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .mensagem {
+            display: none;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #e7f1ff;
+            border: 1px solid #b0d4f1;
+            border-radius: 5px;
+            color: #333;
+        }
+        #nextButton {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #nextButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Questão 1 -->
+    <div class="container" id="question1">
+        <h1>MILLION DOLLAR QUESTION!</h1>
+        <h2>WHAT COUNTRY IS THIS SHADOW FROM?</h2>
+        <div class="shadow">
+            <img src="download.png" alt="Shadow of a country">
+        </div>
+        <div class="options">
+            <button onclick="mostrarMensagem(1, 'UNITED STATES')">UNITED STATES</button>
+            <button onclick="mostrarMensagem(1, 'AUSTRALIA')">AUSTRALIA</button>
+            <button onclick="mostrarMensagem(1, 'CANADA')">CANADA</button>
+            <button onclick="mostrarMensagem(1, 'UNITED KINGDOM')">UNITED KINGDOM</button>
+        </div>
+        <div class="mensagem"></div>
+        <p>By Enzo Ando Trevisan, Colégio Londrinense</p>
+    </div>
+    
+    <!-- Questão 2 -->
+    <div class="container" id="question2">
+        <h1>MILLION DOLLAR QUESTION!</h1>
+        <h2>WHAT COUNTRY IS THIS SHADOW FROM?</h2>
+        <div class="shadow">
+            <img src="jp.png" alt="Shadow of a country">
+        </div>
+        <div class="options">
+            <button onclick="mostrarMensagem(2, 'UNITED STATES')">UNITED STATES</button>
+            <button onclick="mostrarMensagem(2, 'CHINA')">CHINA</button>
+            <button onclick="mostrarMensagem(2, 'JAPAN')">JAPAN</button>
+            <button onclick="mostrarMensagem(2, 'PAPUA NEW GUINEA')">PAPUA NEW GUINEA</button>
+        </div>
+        <div class="mensagem"></div>
+        <p>By Enzo Ando Trevisan, Colégio Londrinense</p>
+    </div>    
+    
+    <!-- Questão 3 -->
+    <div class="container" id="question3">
+        <h1>MILLION DOLLAR QUESTION!</h1>
+        <h2>WHAT COUNTRY IS THIS SHADOW FROM?</h2>
+        <div class="shadow">
+            <img src="itl.png" alt="Shadow of a country">
+        </div>
+        <div class="options">
+            <button onclick="mostrarMensagem(3, 'GREECE')">GREECE</button>
+            <button onclick="mostrarMensagem(3, 'GERMANY')">GERMANY</button>
+            <button onclick="mostrarMensagem(3, 'FRANCE')">FRANCE</button>
+            <button onclick="mostrarMensagem(3, 'ITALY')">ITALY</button>
+        </div>
+        <div class="mensagem"></div>
+        <p>By Enzo Ando Trevisan, Colégio Londrinense</p>
+    </div>
+    
+    <!-- Botão para a próxima página -->
+    <div class="container">
+        <button id="nextButton" onclick="location.href='../Sakura-Cad-Captor/index.html'">Proceed to Next Page</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

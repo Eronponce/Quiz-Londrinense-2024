@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Quiz - Questão Final</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="Jogo">
+  <div class="tudao">
+    <header>
+      <h1 class="Sakura">★Quiz★</h1>
+    </header>
+
+
+    <img src="https://m.media-amazon.com/images/I/81xlgBH-pML._SL1500_.jpg" alt="Sakura Card Captor" width="800" height="850"/>
+
+    <h2><i>3-Wich year Sakura Card Captor was released?</i></h2>
+    <form onsubmit="return checkAnswer()">
+      <div class="aff">
+        <input type="radio" name="question3" value="1996" id="option1">
+        <label for="option1"> 1996 </label><br>
+        <input type="radio" name="question3" value="1998" id="option2">
+        <label for="option2"> 1998 </label><br>
+        <input type="radio" name="question3" value="2000" id="option3">
+        <label for="option3"> 2000 </label><br><br>
+        <input class="Quatro" type="submit" value="Enviar">
+      </div>
+    </form>
+
+    <script>
+      function checkAnswer() {
+        const radios = document.getElementsByName('question3');
+        let selectedValue;
+        for (const radio of radios) {
+          if (radio.checked) {
+            selectedValue = radio.value;
+            break;
+          }
+        }
+        if (selectedValue === '1996') {
+          alert('Correto! Você completou o quiz.');
+          window.location.href = '../SharpGruesomeProcedures (1)/index.html'; // Página de parabéns ou resultado final
+          return false;
+        } else {
+          alert('Incorreto. Tente novamente.');
+          return false;
+        }
+      }
+    </script>
+
+  </div>
+</body>
+</html>

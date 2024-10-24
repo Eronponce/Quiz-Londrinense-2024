@@ -1,0 +1,180 @@
+html {
+  height: 100%;
+  width: 100%;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(67,67,255,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+.Titulo{
+font-family: "Tiny5";
+font-size: 5vw;
+text-align: center;
+}
+
+.imagemmeio{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 5%;
+}
+
+.imageminicial{
+  border-radius: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botãoinicio{
+  font-family: "Jomhuria";
+  font-size: 5vw;
+  padding: 5vw;
+  border-radius: 20%;
+  background-color: #00e9fa;
+  color: black;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+  display: flex;
+}
+
+.parágrafo{
+font-family: "Joti One";
+font-size: 4vw;
+text-align: center;
+justify-content: center;
+}
+
+.Botoescima{
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+.Botão1{
+  padding: 4vw;
+  background-color: #51ff00;
+  font-family: "Jomhuria";
+  font-size: 3vw;
+  text-align: inherit;
+  justify-content: inherit;
+  display: flex;
+  border-radius: 5%;
+}
+
+.Botão2{
+  padding: 4vw;
+  background-color: #ff1a1a;
+  font-family: "Jomhuria";
+  font-size: 3vw;
+  text-align: inherit;
+  justify-content: inherit;
+  display: flex;
+  border-radius: 5%;
+}
+
+.espiral{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.Botoesbaixo{
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+.Botão3{
+  padding: 4vw;
+  background-color: #00d9ff;
+  font-family: "Jomhuria";
+  font-size: 3vw;
+  text-align: inherit;
+  justify-content: inherit;
+  display: flex;
+  border-radius: 5%;
+}
+
+.Botão4{
+  padding: 4vw;
+  background-color: #5e0080;
+  font-family: "Jomhuria";
+  font-size: 3vw;
+  text-align: inherit;
+  justify-content: inherit;
+  display: flex;
+  border-radius: 5%;
+}
+
+.Derrota{
+  font-size: 7vw;
+  font-family: "Tiny5";
+  text-align: center;
+  text-shadow: 4px 4px 6px rgba(228, 9, 9, 1);
+}
+
+.imagemderrota{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.botãoderrota{
+  padding: 4vw;
+  background-color: #ffee00;
+  font-family: "Jomhuria";
+  font-size: 3vw;
+  text-align: center;
+  justify-content:space-around;
+  display: flex;
+  width: 50%;
+  margin-right: 50%;
+  margin-left: 20%;
+  border-radius: 20%;
+}
+
+.voltarinicio{
+  padding: 4vw;
+  background-color: #bd0000;
+  font-family: "Jomhuria";
+  font-size: 4vw;
+  text-align: center;
+  justify-content:space-around;
+  display: flex;
+  width: 50%;
+  margin-top: 20%;
+  margin-right: 50%;
+  margin-left: 20%;
+  border-radius: 20%;
+}
+.imagemvitória{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.Vitória{
+  font-size: 7vw;
+  font-family: "Protest Strike";
+  text-align: center;
+  text-shadow: 4px 4px 6px rgba(27, 255, 0, 1);
+}
+
+.rodapé{
+padding: 4vw;
+background-color: black;
+color: white;
+font-family: "Jomhuria";
+text-align: center;
+justify-content: space-around;
+display: flex;
+font-size: 4vw;
+margin-top: 5%;
+}

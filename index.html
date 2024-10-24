@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Londrinense Tech 2024</title>
+    <!-- Importação de fontes do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Estilização do corpo */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1abc9c, #3498db);
+            color: #fff;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* Container central */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        /* Efeito de partículas no fundo */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.imgur.com/9Xh4J58.png') repeat;
+            opacity: 0.05;
+            animation: moveBackground 60s linear infinite;
+        }
+        @keyframes moveBackground {
+            from { background-position: 0 0; }
+            to { background-position: 1000px 1000px; }
+        }
+        /* Título principal */
+        h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        /* Descrição */
+        p {
+            font-size: 24px;
+            max-width: 800px;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        /* Botão personalizado */
+        .start-button {
+            background: #e74c3c;
+            color: #fff;
+            padding: 20px 60px;
+            font-size: 24px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .start-button:hover {
+            background: #c0392b;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    <div class="container">
+        <h1>Quiz Londrinense Tech 2024</h1>
+        <p>Bem-vindo ao Quiz Londrinense Tech 2024, criado pelos alunos que concluíram o curso Londrinense Tech Intermediário. Teste seus conhecimentos e divirta-se!</p>
+        <a href="aplicativo\index.html" class="start-button">Começar o Quiz</a>
+    </div>
+</body>
+</html>

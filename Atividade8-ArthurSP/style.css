@@ -1,0 +1,88 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.perguntas {
+  display:flex;
+  justify-content: center;
+}
+
+.fada {
+  text-align: center;
+color: #d75656;}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  text-align:right;
+  }
+
+.direita {display: flex;
+    flex-direction: row-reverse;
+    }
+
+body {background: rgb(2,0,36);
+background: linear-gradient(to top, rgba(2,0,36,1) 0%,rgba(112,219,12,1) 0%, rgba(0,212,255,1) 100%);
+
+.ber {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  text-align: center;
+  padding: 20px;
+}
+
+h1.fada {
+  color: #333;
+}
+
+img.ber {
+  width: 200px;
+  height: auto;
+}
+
+.perguntas ol {
+  list-style-position: inside;
+  text-align: left;
+  display: inline-block;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.direita {
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#result {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+footer {
+  margin-top: 50px;
+  color: #777;
+}

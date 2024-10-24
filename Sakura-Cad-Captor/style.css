@@ -1,0 +1,78 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #f9d8c5;
+}
+
+
+.Sakura{
+  color: #fffbf3;
+  border: 3xp solid #d6b89a;
+  border-radius: 90px;
+  border-width: 9px;
+  border-style: double;
+  text-align: center;
+  background-color: #b68049;
+  font-size: 60px;
+
+}
+
+p{
+  font-size: 1.5em;
+}
+ a {text-decoration: none;
+  
+}
+.Um{ 
+  color: #fffbf3;
+  border-radius: 90px;
+  border-width: 4px;
+  text-align: center;
+  background-color: #b68049;
+  font-size: 15px;
+  border-color: #fffbf3;
+}
+.Dois{ 
+  color: #fffbf3;
+  border-radius: 90px;
+  border-width: 4px;
+  text-align: center;
+  background-color: #b68049;
+  font-size: 15px;
+  border-color: #fffbf3;
+}
+.Tres{ 
+  color: #fffbf3;
+  border-radius: 90px;
+  border-width: 4px;
+  text-align: center;
+  background-color: #b68049;
+  font-size: 15px;
+  border-color: #fffbf3;
+}
+.Quatro{ 
+  color: #fffbf3;
+  border-radius: 90px;
+  border-width: 4px;
+  text-align: center;
+  background-color: #b68049;
+  font-size: 15px;
+  border-color: #fffbf3;
+}
+.Cinco{ 
+  color: #fffbf3;
+  border-radius: 90px;
+  border-width: 4px;
+  text-align: center;
+  background-color: #b68049;
+  font-size: 15px;
+  border-color: #fffbf3;
+}
+
+.tudao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

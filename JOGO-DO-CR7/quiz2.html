@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            background-image: url(https://placar.com.br/wp-content/uploads/2024/02/GG4oVfXW4AISM7G.jpg);
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 800px;
+            max-width: 90%;
+            text-align: center;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 0;
+            color: white;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .option {
+            background-color: #f4f4f4;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #e0e0e0;
+        }
+
+        .option.selected {
+            border-color: #4caf50;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="oi">
+        <h1>Quiz de inglês do CR7</h1>
+        <div class="question">Qual é a cor da minha camiseta do Al Nassr?</div>
+        <div class="options">
+            <div class="option" onclick="selectOption(this)">Blue</div>
+            <div class="option" onclick="selectOption(this)">Red</div>
+            <div class="option" onclick="selectOption(this)">Green</div>
+            <div class="option" onclick="selectOption(this)">Yellow</div>
+        </div>
+
+        <button class="button" onclick="checkAnswer()">Next Question</button>
+
+    </div>
+
+    <script>
+        var selectedOption = null;
+
+        function selectOption(option) {
+            // Remove a classe 'selected' de todas as opções
+            var options = document.querySelectorAll('.option');
+            options.forEach(function(opt) {
+                opt.classList.remove('selected');
+            });
+            option.classList.add('selected');
+            selectedOption = option.textContent;
+        }
+
+        function checkAnswer() {
+            if (selectedOption === null) {
+                alert('Por favor, selecione uma opção.');
+            } else if (selectedOption === 'Yellow') {
+                // Resposta correta
+                window.location.href = 'quiz3.html';
+            } else {
+                // Resposta incorreta
+                alert('Resposta incorreta. Tente novamente.');
+            }
+        }
+    </script>
+</body>
+
+</html>

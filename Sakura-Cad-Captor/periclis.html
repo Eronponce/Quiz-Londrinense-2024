@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Quiz - Questão 1</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="Jogo">
+  <div class="tudao">
+    <header>
+      <h1 class="Sakura">★Quiz★</h1>
+    </header>
+
+    
+    <img src="https://m.media-amazon.com/images/S/pv-target-images/e1b514a7d5ef408cd732d241d998ddbf0f405589fec608b32a6949b2c896c38e.jpg" alt="Sakura Card Captor" width="800" height="750"/>
+
+    <h1><i>1-what is the name of the protagonist?</i></h1>
+    <form onsubmit="return checkAnswer()">
+      <div class="aff">
+        <input type="radio" name="question1" value="Sakura" id="option1">
+        <label for="option1"> Sakura </label><br>
+        <input type="radio" name="question1" value="Sukuna" id="option2">
+        <label for="option2"> Sukuna </label><br>
+        <input type="radio" name="question1" value="Saori" id="option3">
+        <label for="option3"> Saori </label><br><br>
+        <input class="Um" type="submit" value="Enviar">
+      </div>
+    </form>
+
+    <script>
+      function checkAnswer() {
+        const radios = document.getElementsByName('question1');
+        let selectedValue;
+        for (const radio of radios) {
+          if (radio.checked) {
+            selectedValue = radio.value;
+            break;
+          }
+        }
+        if (selectedValue === 'Sakura') {
+          alert('Correto!');
+          window.location.href = 'dois.html';
+          return false;
+        } else {
+          alert('Incorreto. Tente novamente.');
+          return false;
+        }
+      }
+    </script>
+
+  </div>
+</body>
+</html>

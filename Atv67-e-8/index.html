@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caça-Palavras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Caça-Palavras</h1>
+
+    <input id="input" type="text">
+    <button onclick="verifica()">ok</button>
+    <br>
+    <table id="word-search">
+        <tr>
+            <td>H</td>
+            <td>O</td>
+            <td>P</td>
+            <td>S</td>
+            <td>C</td>
+            <td>O</td>
+            <td>T</td>
+            <td>C</td>
+            <td>H</td>
+            <td>W</td>
+            <td>C</td>
+            <td>P</td>
+            <td>I</td>
+            <td>A</td>
+            <td>N</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>A</td>
+            <td>L</td>
+            <td>L</td>
+            <td>X</td>
+            <td>L</td>
+            <td>I</td>
+            <td>T</td>
+            <td>T</td>
+            <td>L</td>
+            <td>F</td>
+            <td>I</td>
+            <td>S</td>
+            <td>H</td>
+            <td>R</td>
+        </tr>
+        <tr>
+            <td>P</td>
+            <td>E</td>
+            <td>N</td>
+            <td>R</td>
+            <td>T</td>
+            <td>A</td>
+            <td>P</td>
+            <td>L</td>
+            <td>O</td>
+            <td>L</td>
+            <td>L</td>
+            <td>I</td>
+            <td>P</td>
+            <td>O</td>
+            <td>P</td>
+        </tr>
+        <tr>
+            <td>S</td>
+            <td>C</td>
+            <td>H</td>
+            <td>O</td>
+            <td>O</td>
+            <td>L</td>
+            <td>C</td>
+            <td>R</td>
+            <td>I</td>
+            <td>A</td>
+            <td>N</td>
+            <td>K</td>
+            <td>I</td>
+            <td>D</td>
+            <td>R</td>
+        </tr>
+        <tr>
+            <td>L</td>
+            <td>E</td>
+            <td>G</td>
+            <td>O</td>
+            <td>L</td>
+            <td>G</td>
+            <td>E</td>
+            <td>O</td>
+            <td>E</td>
+            <td>X</td>
+            <td>Y</td>
+            <td>Z</td>
+            <td>W</td>
+            <td>V</td>
+            <td>U</td>
+        </tr>
+        <tr>
+            <td>T</td>
+            <td>O</td>
+            <td>Y</td>
+            <td>N</td>
+            <td>Q</td>
+            <td>U</td>
+            <td>E</td>
+            <td>D</td>
+            <td>O</td>
+            <td>K</td>
+            <td>L</td>
+            <td>M</td>
+            <td>N</td>
+            <td>O</td>
+            <td>P</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>A</td>
+            <td>O</td>
+            <td>E</td>
+            <td>L</td>
+            <td>H</td>
+            <td>O</td>
+            <td>F</td>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+            <td>J</td>
+            <td>K</td>
+            <td>L</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td>R</td>
+            <td>A</td>
+            <td>B</td>
+            <td>B</td>
+            <td>I</td>
+            <td>T</td>
+            <td>P</td>
+            <td>R</td>
+            <td>I</td>
+            <td>S</td>
+            <td>T</td>
+            <td>U</td>
+            <td>V</td>
+            <td>W</td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td>H</td>
+            <td>I</td>
+            <td>J</td>
+            <td>K</td>
+            <td>L</td>
+            <td>M</td>
+            <td>N</td>
+            <td>O</td>
+            <td>P</td>
+            <td>Q</td>
+            <td>R</td>
+            <td>S</td>
+            <td>T</td>
+            <td>U</td>
+            <td>V</td>
+        </tr>
+        <tr>
+            <td>O</td>
+            <td>P</td>
+            <td>Q</td>
+            <td>R</td>
+            <td>S</td>
+            <td>T</td>
+            <td>U</td>
+            <td>V</td>
+            <td>W</td>
+            <td>X</td>
+            <td>Y</td>
+            <td>Z</td>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+        </tr>
+
+    </table>
+    <h2>Palavras para encontrar:</h2>
+    <input disabled id="output1" type="text">    
+     <input disabled id="output2" type="text">
+     <input disabled id="output3" type="text">
+     <input disabled id="output4" type="text">
+     <input disabled id="output5" type="text">
+     <input disabled id="output6" type="text">
+     <input disabled id="output7" type="text">
+     <input disabled id="output8" type="text">
+     <input disabled id="output9" type="text">
+     <input disabled id="output10" type="text">
+     <!-- <ul>
+        <li>HOPSCOTCH</li>
+        <li>RABBIT</li>
+        <li>FISH</li>
+        <li>BALL</li>
+        <li>KID</li>
+        <li>LOLLIPOP</li>
+        <li>TOY</li>
+        <li>SCHOOL</li>
+        <li>PEN</li>
+        <li>LEGO</li>
+    </ul>  -->
+    <button id="nextButton" onclick="proximaPagina()" disabled>Próxima Página</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

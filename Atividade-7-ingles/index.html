@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .question label {
+            display: block;
+            margin: 5px 0;
+        }
+        .question input {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #result {
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Game</h1>
+        <div id="quiz">
+            <div class="question">
+                <p>1. What is the capital of France?</p>
+                <label><input type="radio" name="q1" value="a"> Berlin</label>
+                <label><input type="radio" name="q1" value="b"> Madrid</label>
+                <label><input type="radio" name="q1" value="c"> Paris</label>
+                <label><input type="radio" name="q1" value="d"> Rome</label>
+            </div>
+            <div class="question">
+                <p>2. What is the result of the account? 14+8x2</p>
+                <label><input type="radio" name="q2" value="a"> 28</label>
+                <label><input type="radio" name="q2" value="b"> 30</label>
+                <label><input type="radio" name="q2" value="c"> 44</label>
+                <label><input type="radio" name="q2" value="d"> 32</label>
+            </div>
+            <div class="question">
+                <p>3. Which Brazilian team has 3 World Cups??</p>
+                <label><input type="radio" name="q3" value="a"> Flamengo</label>
+                <label><input type="radio" name="q3" value="b"> Santos</label>
+                <label><input type="radio" name="q3" value="c"> Corinthians</label>
+                <label><input type="radio" name="q3" value="d"> São Paulo</label>
+            </div>
+            <button onclick="submitQuiz()">Submit</button>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            var score = 0;
+            var totalQuestions = 3;
+            var correctAnswers = {
+                q1: 'c',
+                q2: 'b',
+                q3: 'd'
+            };
+
+            for (var i = 1; i <= totalQuestions; i++) {
+                var selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedOption && selectedOption.value === correctAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            var result = document.getElementById('result');
+            result.innerText = `Você acertou ${score} de ${totalQuestions}!`;
+            if(score == 3){
+                window.location.href = '../Atividade-8-Programacao-do-projeto/index.html';
+            }
+        }
+    </script>
+</body>
+</html>

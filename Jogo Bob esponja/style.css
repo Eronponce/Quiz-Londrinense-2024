@@ -1,0 +1,143 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #ffff38;
+}
+
+.fundoerrado {
+  background-color: #000000;
+}
+.fundoFIM {
+  background-color: #fff8ad;
+  
+}
+#titulo {
+  border: 3px solid #8423fb;
+  border-radius: 90px;
+  border-width: 9px;
+  border-style: double;
+  text-align: center;
+  background-color: #eabdff;
+  font-size: 60px;
+}
+.errado {
+  font-size: 200px;
+  text-align: center;
+  color: red
+}
+.erradi {
+  display: flex;
+  border: 3px solid #ad0000;
+  border-radius: 90px;
+  border-width: 9px;
+  justify-content: center;
+  align-items: center;
+  font-size: 110px;
+  text-align: center;
+  color: #ad0000
+}
+.FIM {
+  font-size: 150px;
+  text-align: center;
+  color: #74009e
+}
+.FIMI{
+  display: flex;
+  border: 3px solid #610085;
+  border-radius: 90px;
+  border-width: 9px;
+  justify-content: center;
+  align-items: center;
+  font-size: 110px;
+  text-align: center;
+  color: #610085
+}
+.imagem {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  margin-left: 90px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.amarelo {
+  border: 3px solid #4900a3;
+  padding: 3%;
+  font-size: 45px;
+  background-color: #f81b1b;
+  width: 160px;
+  text-align: center;
+}
+
+.amarelo:hover {
+  background-color: #ff4d4d;
+}
+
+.amarelo:active {
+  background: #8a0000;
+  top: 2px;
+}
+
+.amarelu {
+  border: 3px solid #4900a3;
+  padding: 3%;
+  font-size: 45px;
+  background-color: #b3f6ff;
+  width: 160px;
+  text-align: center;
+}
+
+.amarelu:hover {
+  background-color: #e1fefb;
+}
+
+.amarelu:active {
+  background: #4deaff;
+  top: 2px;
+}
+
+
+.amarela {
+  border: 3px solid #4900a3;
+  padding: 3%;
+  font-size: 45px;
+  background-color: #ffd700;
+  width: 160px;
+  text-align: center;
+}
+
+.amarela:hover {
+  background-color: #fff8ad;
+}
+
+.amarela:active {
+  background: #ffea00;
+  top: 2px;
+}
+
+.amareli {
+  border: 3px solid #4900a3;
+  padding: 3%;
+  font-size: 45px;
+  background-color: #fda0b0;
+  width: 160px;
+  text-align: center;
+}
+
+.amareli:hover {
+  background-color: #ffbdd7;
+}
+
+.amareli:active {
+  background: #ff3898;
+  top: 2px;
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+}

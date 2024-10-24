@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>What countries are these flags from?</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+
+    #nextButton {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>What countries are these flags from?</h1>
+  <p>Write in English</p>
+  <div>
+    <div>
+      <img src="Flag_of_Brazil.svg.webp" alt="Flag of Brazil">
+      <input id="atv1" type="text">
+      <span id="feedback1"></span>
+    </div>
+    <div>
+      <img src="alemanha.webp" alt="Flag of Germany">
+      <input id="atv2" type="text">
+      <span id="feedback2"></span>
+    </div>
+    <div>
+      <img src="bandeira-da-espanha.webp" alt="Flag of Spain">
+      <input id="atv3" type="text">
+      <span id="feedback3"></span>
+    </div>
+  </div>
+  <button onclick="checkAnswers()">Submit</button>
+  <button id="nextButton" onclick="window.location.href='../Traduza-as-frases/index.html'">Next Page</button>
+  <footer>
+    Thiago Mendonça Agudo Romão 2024
+  </footer>
+
+  <script>
+    function checkAnswers() {
+      let correctCount = 0;
+
+      // Resposta da Questão 1
+      let answer1 = document.getElementById('atv1').value.trim().toLowerCase();
+      let feedback1 = document.getElementById('feedback1');
+      if (answer1 === 'brazil') {
+        feedback1.textContent = 'Correct!';
+        feedback1.className = 'correct';
+        correctCount++;
+      } else {
+        feedback1.textContent = 'Incorrect.';
+        feedback1.className = 'incorrect';
+      }
+
+      // Resposta da Questão 2
+      let answer2 = document.getElementById('atv2').value.trim().toLowerCase();
+      let feedback2 = document.getElementById('feedback2');
+      if (answer2 === 'germany') {
+        feedback2.textContent = 'Correct!';
+        feedback2.className = 'correct';
+        correctCount++;
+      } else {
+        feedback2.textContent = 'Incorrect.';
+        feedback2.className = 'incorrect';
+      }
+
+      // Resposta da Questão 3
+      let answer3 = document.getElementById('atv3').value.trim().toLowerCase();
+      let feedback3 = document.getElementById('feedback3');
+      if (answer3 === 'spain') {
+        feedback3.textContent = 'Correct!';
+        feedback3.className = 'correct';
+        correctCount++;
+      } else {
+        feedback3.textContent = 'Incorrect.';
+        feedback3.className = 'incorrect';
+      }
+
+      // Verificar se todas as respostas estão corretas
+      if (correctCount === 3) {
+        document.getElementById('nextButton').style.display = 'inline';
+        alert('All answers are correct! You can proceed to the next page.');
+      }
+    }
+  </script>
+</body>
+
+</html>

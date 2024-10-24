@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Traduza as frases para o inglês</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+
+    #nextButton {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Traduza as frases para o inglês:</h1>
+
+  <div class="pergunta1">
+    <p>1. Qual o seu nome?</p>
+  </div>
+  <div class="resposta1">
+    <p>Resposta: <input type="text" id="answer1"></p>
+    <span id="feedback1"></span>
+  </div>
+
+  <div class="pergunta2">
+    <p>2. Quantos anos você tem?</p>
+  </div>
+  <div class="resposta2">
+    <p>Resposta: <input type="text" id="answer2"></p>
+    <span id="feedback2"></span>
+  </div>
+
+  <div class="pergunta3">
+    <p>3. Qual sua cor favorita?</p>
+  </div>
+  <div class="resposta3">
+    <p>Resposta: <input type="text" id="answer3"></p>
+    <span id="feedback3"></span>
+  </div>
+
+  <button onclick="checkAnswers()">Enviar</button>
+  <button id="nextButton" onclick="window.location.href='../fim.html'">Próxima Página</button>
+
+  <br>
+
+  <footer>Feito por Rebeca Mendonça Colégio Londrinense</footer>
+
+  <script>
+    function checkAnswers() {
+      let correctCount = 0;
+
+      // Resposta da Pergunta 1
+      let answer1 = document.getElementById('answer1').value.trim().toLowerCase();
+      let feedback1 = document.getElementById('feedback1');
+      if (answer1 === "what's your name?" || answer1 === "what is your name?") {
+        feedback1.textContent = 'Correto!';
+        feedback1.className = 'correct';
+        correctCount++;
+      } else {
+        feedback1.textContent = 'Incorreto.';
+        feedback1.className = 'incorrect';
+      }
+
+      // Resposta da Pergunta 2
+      let answer2 = document.getElementById('answer2').value.trim().toLowerCase();
+      let feedback2 = document.getElementById('feedback2');
+      if (answer2 === "how old are you?") {
+        feedback2.textContent = 'Correto!';
+        feedback2.className = 'correct';
+        correctCount++;
+      } else {
+        feedback2.textContent = 'Incorreto.';
+        feedback2.className = 'incorrect';
+      }
+
+      // Resposta da Pergunta 3
+      let answer3 = document.getElementById('answer3').value.trim().toLowerCase();
+      let feedback3 = document.getElementById('feedback3');
+      if (answer3 === "what's your favorite color?" || answer3 === "what is your favorite color?") {
+        feedback3.textContent = 'Correto!';
+        feedback3.className = 'correct';
+        correctCount++;
+      } else {
+        feedback3.textContent = 'Incorreto.';
+        feedback3.className = 'incorrect';
+      }
+
+      // Verificar se todas as respostas estão corretas
+      if (correctCount === 3) {
+        document.getElementById('nextButton').style.display = 'inline';
+        alert('Todas as respostas estão corretas! Você pode prosseguir para a próxima página.');
+      }
+    }
+  </script>
+</body>
+
+</html>
